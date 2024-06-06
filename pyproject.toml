@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "seyeon_pytorch_extension"
-version = "0.0.1"
+dynamic = ["version"]
 authors = [
   { name="Kim Se-yeon", email="tpdussla93@gmail.com" },
 ]
@@ -16,10 +16,18 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  "torch",
+  "torchvision",
+  "torchaudio"
+]
 
 [project.urls]
 Homepage = "https://github.com/seyeon923/pytorch_extension"
 Issues = "https://github.com/seyeon923/pytorch_extension/issues"
+
+[tool.hatch.version]
+path = "src/seyeon/pytorch_extension/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/seyeon"]
