@@ -20,7 +20,10 @@ dependencies = [
   "torch",
   "torchvision",
   "torchaudio",
-  "requests"
+  "requests",
+  "tqdm",
+  "lightning",
+  "scipy"
 ]
 
 [project.urls]
